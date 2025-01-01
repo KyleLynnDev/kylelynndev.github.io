@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: "Courier New", monospace;
+    color: #ffffff;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/magical-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header and Navigation */
+header {
+    text-align: center;
+    background-color: #003366;
+    padding: 10px;
+    border-bottom: 2px solid #00ffcc;
+}
+
+header h1 {
+    color: #00ffcc;
+    text-shadow: 2px 2px #002233;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00ffcc;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #002244;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00ffcc;
+    color: #002244;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #00ccff;
+    text-shadow: 1px 1px #002233;
+}
+
+/* Text Blocks */
+.text-block {
+    background-color: #f4e1c1; /* Tan-yellow */
+    color: #8b4513; /* Reddish brown */
+    border: 2px solid #8b4513;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    border-top: 2px solid #00ffcc;
+    color: #ccffcc;
+}
+
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+}
