@@ -8,18 +8,19 @@
 </head>
 <body>
     <header>
+
         <h1>Welcome to My Magical Realm</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game-art.html">Game & Pixel Art</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="environments.html">Environments</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+        
+        <!-- Include this in every page -->
+        <div id="navbar"></div>
+        <script>
+            fetch('/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+
     </header>
     <main>
         <h2>Page Title Here</h2>
