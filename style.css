@@ -46,6 +46,7 @@ img {
     background-color: #320a4f;
     padding: 1em;
     position: sticky;
+    border-radius: 10px;
     top: 0;
     z-index: 100;
     text-align: center;
@@ -78,6 +79,9 @@ p{
     font-size: 30px;
 }
 
+a{
+    font-size: 40px;
+}
 
 /* Floating Container */
 .floating-container {
@@ -99,7 +103,7 @@ p{
 .grid-item {
     flex: 1 1 calc(30% - 2em);
     text-align: center;
-    color:
+    color: white;
 }
 .grid-item a {
     text-decoration: none;
@@ -107,7 +111,7 @@ p{
 }
 .hover-block {
     background: #5c2d91;
-    padding: 2em;
+    padding: 0.5em;
     border-radius: 10px;
     transition: transform 0.3s, background 0.3s;
 }
@@ -131,4 +135,78 @@ footer {
     .grid-item {
         flex: 1 1 calc(100% - 2em);
     }
+}
+
+
+
+
+
+.gallery-section {
+    padding: 20px;
+    
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Lightbox Overlay */
+.lightbox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Close Button */
+.lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Lightbox Image */
+.lightbox-image {
+    max-width: 90%; /* Image width won't exceed 90% of the viewport width */
+    max-height: 90%; /* Image height won't exceed 90% of the viewport height */
+    width: auto; /* Preserve the natural aspect ratio of the image */
+    height: auto; /* Preserve the natural aspect ratio of the image */
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
