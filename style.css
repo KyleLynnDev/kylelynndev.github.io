@@ -8,6 +8,13 @@
     font-style: normal;  /* Optional: Specify styles like normal, italic */
 }
 
+@font-face {
+    font-family: 'RS'; /* A name you will use to reference the font */
+    src: url('fonts/RS.ttf') format('truetype');
+    font-weight: normal; /* Optional: Specify weights like normal, bold */
+    font-style: normal;  /* Optional: Specify styles like normal, italic */
+}
+
 /* Reset */
 body, html {
     margin: 0;
@@ -31,6 +38,7 @@ img {
     height: auto; /* Scale the image to the container's height */
     object-fit: cover; /* Ensure the image scales proportionally */
     justify-content: center;
+    border-radius: 10px;
 }
 
 /* Navbar */
@@ -62,6 +70,15 @@ img {
     color: #f5a623;
 }
 
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-size: 30px;
+}
+
+
 /* Floating Container */
 .floating-container {
     margin: 2em auto;
@@ -82,9 +99,11 @@ img {
 .grid-item {
     flex: 1 1 calc(30% - 2em);
     text-align: center;
+    color:
 }
 .grid-item a {
     text-decoration: none;
+    color:#fff
 }
 .hover-block {
     background: #5c2d91;
@@ -95,12 +114,14 @@ img {
 .hover-block:hover {
     transform: scale(1.05);
     background: #a278d6;
+    color:#fff
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1em;
+    border-radius: 10px;
     background: #320a4f;
     color: #fff;
 }
