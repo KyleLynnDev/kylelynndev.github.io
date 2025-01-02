@@ -1,92 +1,98 @@
 /* Global Styles */
-body {
-    font-family: "Courier New", monospace;
-    color: #ffffff;
-    background-color: #000;
+
+
+@font-face {
+    font-family: 'ACWW'; /* A name you will use to reference the font */
+    src: url('fonts/ACWW.ttf') format('truetype');
+    font-weight: normal; /* Optional: Specify weights like normal, bold */
+    font-style: normal;  /* Optional: Specify styles like normal, italic */
+}
+
+/* Reset */
+body, html {
     margin: 0;
     padding: 0;
-    background-image: url('images/magical-background.jpg');
-    background-repeat: no-repeat;
+    font-family: "ACWW", monospace;
+    color: #fff;
+    background: url('/assets/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Header and Navigation */
-header {
+/* Navbar */
+.navbar {
+    background-color: #320a4f;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     text-align: center;
-    background-color: #003366;
-    padding: 10px;
-    border-bottom: 2px solid #00ffcc;
 }
-
-header h1 {
-    color: #00ffcc;
-    text-shadow: 2px 2px #002233;
-}
-
-nav ul {
-    list-style: none;
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 10px 0 0;
 }
-
-nav ul li {
-    margin: 0 15px;
+.navbar ul li {
+    margin: 0 1em;
 }
-
-nav ul li a {
+.navbar ul li a {
     text-decoration: none;
-    color: #00ffcc;
-    font-size: 18px;
-    padding: 5px 10px;
-    border: 1px solid #00ffcc;
-    border-radius: 5px;
-    background-color: #002244;
-    transition: background-color 0.3s, color 0.3s;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar ul li a:hover {
+    color: #f5a623;
 }
 
-nav ul li a:hover {
-    background-color: #00ffcc;
-    color: #002244;
+/* Floating Container */
+.floating-container {
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 80%;
+    background: rgba(50, 10, 79, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+/* Grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+.grid-item {
+    flex: 1 1 calc(30% - 2em);
     text-align: center;
 }
-
-h2 {
-    font-size: 24px;
-    color: #00ccff;
-    text-shadow: 1px 1px #002233;
+.grid-item a {
+    text-decoration: none;
 }
-
-/* Text Blocks */
-.text-block {
-    background-color: #f4e1c1; /* Tan-yellow */
-    color: #8b4513; /* Reddish brown */
-    border: 2px solid #8b4513;
-    padding: 15px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: left;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    font-size: 16px;
+.hover-block {
+    background: #5c2d91;
+    padding: 2em;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+.hover-block:hover {
+    transform: scale(1.05);
+    background: #a278d6;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #003366;
-    border-top: 2px solid #00ffcc;
-    color: #ccffcc;
+    padding: 1em;
+    background: #320a4f;
+    color: #fff;
 }
 
-footer a {
-    color: #00ffcc;
-    text-decoration: none;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 calc(100% - 2em);
+    }
 }
