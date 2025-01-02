@@ -20,6 +20,19 @@ body, html {
     
 }
 
+.img-container {
+    width: 40%; /* Set the desired container width */
+    height: auto; /* Set the desired container height */
+     /* Optional: Hide any overflow if the image is too large */
+}
+
+img {
+    width: 100%; /* Scale the image to the container's width */
+    height: auto; /* Scale the image to the container's height */
+    object-fit: cover; /* Ensure the image scales proportionally */
+    justify-content: center;
+}
+
 /* Navbar */
 .navbar {
     background-color: #320a4f;
