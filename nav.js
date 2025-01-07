@@ -3,3 +3,4 @@ fetch('nav.html')
     .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
+
