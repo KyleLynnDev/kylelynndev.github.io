@@ -187,14 +187,14 @@ footer {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 10px;
     justify-items: center;
 }
 
 .gallery-container img {
     width: 100%;
-    max-width: 300px;
+    max-width: 1200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -202,7 +202,7 @@ footer {
 }
 
 .gallery-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -255,39 +255,58 @@ footer {
 
 /* SIDE BY SIDE IMAGES IN THE PROJECT PAGE*/
 
-
 .side-by-side {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* wraps on smaller screens */
+    align-items: stretch;
     justify-content: center;
     gap: 20px;
     margin: 20px;
-  }
-  
-  .item-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px; /* Adjust width to match the image size */
-    height: 300px; /* Adjust height to match the image size */
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensures long lists do not exceed the height */
-    text-align: center;
-  }
-  
-  .item-list li {
-    margin: 10px 0;
-  }
-  
-  .side-image {
-    width: 300px; /* Match the image width with the list's width */
-    height: 300px; /* Match the image height with the list's height */
-    object-fit: cover; /* Ensures the image scales to fit without distortion */
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    width: 98%;
+}
 
+.item-list {
+    flex: 1 1 300px; /* allow it to grow and shrink */
+    list-style-type: none;
+    padding: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.item-list li {
+    font-size: clamp(2rem, 4vw, 6rem); /* minimum 1rem, preferred 2vw, max 2rem */
+    margin: 10px 0;
+}
+
+.side-image {
+    flex: 1 1 300px; /* same as item-list */
+    width: 90%; /* ensures the image scales inside its flex box */
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* project page button with links */
+
+.play-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background-color: #387ea0;
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.play-button:hover {
+    background-color: #00c9b1;
+    transform: scale(1.05);
+    color: #fff;
+}
